@@ -1,0 +1,11 @@
+services:
+
+  controller.form_testing_controller:
+    class: Kutny\FrontBundle\Controller\FormTestingController
+
+  form.test_post_form:
+    class: Kutny\FormTest\TestPostForm
+
+  facade.insert_test_entity_facade:
+    class: Kutny\FormTest\InsertTestEntityFacade
+    arguments: [@doctrine.orm.default_entity_manager]

@@ -1,0 +1,11 @@
+<h1>{{ heading }}</h1>
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+
+<form action="{{ path('route.form_test2') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit"/>
+</form>
